@@ -1,22 +1,14 @@
 import 'package:flutter/material.dart';
+import 'App.dart';
+
 
 //there are 3 different imports directive
-//word package informs flutter we are importing
+//package -> informs flutter we are importing
 //from a third party lib
 
-void main(){
-  var app = MaterialApp(
-    home: Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        print('hi there!');
-      }, 
-        child: Text("+"),
-      ),
-      appBar: AppBar(
-        title: Text("nao sei se ta funcionando legal"),
-      ),
-    ),
-  );
+//dart.io -> imports from dart base packages
 
-  runApp(app);
+//xxx.dart, option.dart -> imports from lib to anything in lib?
+void main(){
+  runApp(App());
 }
