@@ -1,7 +1,7 @@
 class ImageModel {
-  int id;
-  String url;
-  String title;
+  int id = 0;
+  String url = '';
+  String title = '';
 
   ImageModel(this.id, this.url, this.title);
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'app.dart';
+import '../../app.dart';
 
 
 //there are 3 different imports directive
