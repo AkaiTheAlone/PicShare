@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-
+import 'package:http/http.dart' show get;
 
 //stateful -> will have instance variables that will change
 //it also needs to update itself when data changes on execution time
@@ -14,18 +13,22 @@ class App extends StatefulWidget{
   }
 }
 
+void fetchImage(){
+  get('https://jsonplaceholder.typicode.com/photos')
+}
+
 //abstract methods can be override by @override directive
 // before concrete implementation
 class AppState extends State<App> {
   int counter = 0;
-
+//every time we ask for materialapp,scaffold, text, we are initializing
+// an new instance of the class
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        floatingActionButton: FloatingActionButton(onPressed: () {
-          print('fala primo');
-        },
+        body: Text('$counter') ,
+        floatingActionButton: FloatingActionButton(onPressed: fetchImage,
           child: Icon(Icons.add),
         ),
         appBar: AppBar(
@@ -35,7 +38,6 @@ class AppState extends State<App> {
     );
   }
 }
-
 
 //stateless -> does not contain variable data
 //stateful otherwise does
